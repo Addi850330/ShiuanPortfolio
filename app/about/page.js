@@ -5,7 +5,7 @@ import Image from "next/image";
 import { data } from "./about";
 import styles from "./page.module.css";
 
-const page = () => {
+const Page = () => {
   const about = data[3].about;
   const [abo, setAbout] = useState(about);
 
@@ -138,4 +138,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
