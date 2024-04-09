@@ -1,0 +1,220 @@
+.main {
+  max-width: 1200px;
+  margin: auto;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+.secPadding {
+  padding: 80px 0;
+}
+.container {
+  padding: 0 40px;
+  width: 100%;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.btn {
+  line-height: 1.5;
+  background-color: var(--whith-alpha-25);
+  border: 1px solid var(--whith-alpha-40);
+  padding: 10px 28px;
+  display: inline-block;
+  border-radius: 30px;
+  color: var(--main-color);
+  font-weight: 500;
+  text-transform: capitalize;
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+  vertical-align: middle;
+  transition: color 0.3s ease;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  background-color: var(--main-color);
+  z-index: -1;
+  transition: width 0.3s ease;
+}
+.btn:hover {
+  color: var(--white);
+}
+.btn:hover::before {
+  width: 100%;
+}
+.sectionTitle {
+  padding: 0 15px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.sectionTitle h2 {
+  font-size: 40px;
+  text-transform: capitalize;
+  cursor: default;
+}
+.aboutImg {
+  width: 40%;
+  padding: 0 15px;
+}
+.aboutText {
+  /* background-color: blue; */
+  width: 60%;
+  padding: 0 15px;
+}
+.aboutImg .imgBox {
+  background-color: var(--whith-alpha-25);
+  max-width: 380px;
+  border: 1px solid var(--whith-alpha-40);
+  margin: auto;
+  border-radius: 10px;
+}
+.aboutImg .imgBox img {
+  width: 100%;
+  height: 100%;
+}
+.aboutText h3 {
+  text-transform: capitalize;
+  font-size: 20px;
+  margin: 20px 0;
+  cursor: default;
+}
+.aboutText .skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+.aboutText .skillItem {
+  background-color: var(--whith-alpha-25);
+  border: 1px solid var(--whith-alpha-40);
+  padding: 5px 15px;
+  text-transform: capitalize;
+  margin: 0 10px 10px 0;
+  border-radius: 20px;
+  cursor: default;
+}
+.aboutTabs {
+  margin-top: 20px;
+}
+.aboutTabs .tabItem {
+  padding: 2px 0;
+  background-color: transparent;
+  border: none;
+  text-transform: capitalize;
+  display: inline-block;
+  color: var(--dark-blue);
+  font-size: 20px;
+  cursor: pointer;
+  font-size: 500;
+  margin: 0 30px 0 0;
+  position: relative;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+.aboutTabs .tabItem:last-child {
+  margin: 0;
+}
+.aboutTabs .tabItem::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background-color: var(--dark-blue);
+  transition: width 0.3s ease;
+}
+.aboutTabs .tabItem:hover::before {
+  width: 100%;
+}
+.aboutTabs .tabItem.active::before {
+  width: 100%;
+  background-color: var(--main-color);
+}
+.aboutTabs .tabItem.active {
+  color: var(--main-color);
+  opacity: 1;
+  cursor: auto;
+  /* 更改按鈕樣式 */
+}
+.aboutText .timeLine {
+  position: relative;
+}
+.aboutText .timeLine::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  top: 0;
+  left: 5px;
+  background-color: var(--main-color);
+}
+.aboutText .tabContent {
+  padding: 40px 0;
+  display: none;
+  cursor: default;
+  /* 切換資料 */
+}
+.aboutText .tabContent.active {
+  display: block;
+  /* 切換資料 */
+}
+.aboutText .timelineItem {
+  margin-bottom: 30px;
+  position: relative;
+  padding: 10px 0 0 40px;
+}
+.aboutText .timelineItem::before {
+  content: "";
+  position: absolute;
+  height: 11px;
+  width: 11px;
+  background-color: var(--main-color);
+  left: 0;
+  top: 16px;
+  border-radius: 50%;
+}
+.aboutText .timelineItem:last-child {
+  margin-bottom: 0;
+}
+.aboutText .timelineItem .date {
+  display: block;
+  color: var(--main-color);
+  font-weight: 400;
+  margin: 0 0 10px;
+}
+.aboutText .timelineItem h4 {
+  font-size: 18px;
+  text-transform: capitalize;
+  margin: 0 0 10px;
+}
+.aboutText .timelineItem h4 span {
+  font-weight: 400;
+}
+.aboutText .btn {
+  margin: 0 15px 15px 0;
+}
+
+/* rwd */
+@media (max-width: 767px) {
+  .aboutImg,
+  .aboutText {
+    width: 100%;
+  }
+  .aboutText {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 575px) {
+  .sectionTitle h2 {
+    font-size: 35px;
+  }
+}

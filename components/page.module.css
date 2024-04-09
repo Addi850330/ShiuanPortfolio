@@ -1,0 +1,236 @@
+.main {
+  max-width: 1200px;
+  margin: auto;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+.container {
+  padding: 0 40px;
+  width: 100%;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flexEnd {
+  justify-content: flex-end;
+}
+/* header */
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  padding: 20px 0 0;
+}
+.header.active {
+  position: fixed;
+  top: 35px;
+  padding: 20px 15px;
+}
+.header.active .container {
+  max-width: 1200px;
+  margin: auto;
+}
+.header .navToggler {
+  width: 50px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: var(--whith-alpha-25);
+  border: 1px solid var(--whith-alpha-40);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 15px;
+  z-index: 1;
+  transition: opacity 0.5s ease;
+}
+/* .header .navToggler.hide {
+  opacity: 0;
+  transition: none;
+} */
+.header .navToggler span {
+  height: 2px;
+  width: 24px;
+  background-color: var(--main-color);
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+.header .navToggler span.active {
+  background-color: transparent;
+}
+.header .navToggler span::before,
+.header .navToggler span::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: var(--main-color);
+  position: absolute;
+  top: 0;
+  transition: all 0.3s ease;
+}
+.header .navToggler span::before {
+  left: 0;
+  transform: translateY(-8px);
+}
+.header .navToggler span.active::before {
+  transform: rotate(45deg);
+}
+.header .navToggler span::after {
+  right: 0;
+  transform: translateY(8px);
+}
+.header .navToggler span.active::after {
+  transform: rotate(-45deg);
+}
+.header .navToggler:hover span:not(.active)::before,
+.header .navToggler:hover span:not(.active)::after {
+  width: 50%;
+}
+.header .nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  padding: 35px 15px;
+  overflow-y: auto;
+  visibility: hidden;
+  /* this is hidden set */
+}
+.header .nav.active {
+  visibility: visible;
+}
+.header .navInner {
+  min-height: calc(100vh - 70px);
+  max-width: 1200px;
+  margin: auto;
+  background-color: var(--whith-alpha-25);
+  border: 8px solid var(--whith-alpha-40);
+  backdrop-filter: var(--backdrop-filter-blur);
+  padding: 50px 0;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.header .navInner.active {
+  opacity: 1;
+}
+.header .navInner ul li {
+  text-align: center;
+}
+.header .navInner ul li a {
+  font-size: 40px;
+  text-transform: capitalize;
+  color: var(--dark-blue);
+  display: block;
+  font-weight: 500;
+  padding: 8px 15px;
+  transition: color 0.3s ease;
+  position: relative;
+}
+.header .navInner ul li a::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 50%;
+  width: 0;
+  background-color: var(--whith-alpha-25);
+  z-index: -1;
+  transition: width 0.5s ease;
+}
+.header .navInner ul li a:hover::before {
+  width: 100%;
+}
+.header .navInner ul li a:hover {
+  color: var(--main-color);
+}
+/* bgc - circle */
+.bgCircle {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  /* background-color: #e02f6b; */
+  max-width: 1200px;
+  width: calc(100% - 30px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.bgCircle div {
+  position: absolute;
+  border-radius: 50%;
+}
+.bgCircle .circleFir {
+  height: 60px;
+  width: 60px;
+  background-color: var(--blue);
+  left: 5%;
+  top: 10%;
+  opacity: 0.3;
+  animation: zoonInOut 8s linear infinite;
+}
+.bgCircle .circleSec {
+  height: 80px;
+  width: 80px;
+  background-color: var(--main-color);
+  left: 30%;
+  top: 50%;
+  opacity: 0.4;
+  animation: bounceTop 5s ease-in-out infinite;
+}
+.bgCircle .circleThi {
+  height: 120px;
+  width: 120px;
+  background-color: var(--cyan-light);
+  top: 40%;
+  right: -60px;
+  opacity: 0.6;
+}
+.bgCircle .circleFor {
+  height: 50px;
+  width: 50px;
+  background-color: var(--orange);
+  left: -30px;
+  top: 80%;
+  opacity: 0.6;
+}
+@keyframes zoonInOut {
+  0%,
+  100% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+@keyframes bounceTop {
+  0%,
+  100% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+}
+
+/* rwd */
+@media (max-width: 991px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+@media (max-width: 575px) {
+  .container {
+    padding: 0;
+  }
+  .header .navInner ul li a {
+    font-size: 35px;
+  }
+}

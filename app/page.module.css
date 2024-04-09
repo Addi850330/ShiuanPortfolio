@@ -1,0 +1,175 @@
+.main {
+  max-width: 1200px;
+  margin: auto;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+
+.homeSection {
+  padding: 120px 0;
+}
+
+.container {
+  padding: 0 40px;
+  width: 100%;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.alignItemCenter {
+  align-items: center;
+}
+.homeText,
+.homeImg {
+  width: 50%;
+  padding: 15px;
+}
+.homeText p {
+  font-size: 18px;
+  cursor: default;
+}
+.homeText h1 {
+  font-size: 50px;
+  text-transform: capitalize;
+  cursor: default;
+}
+.homeText h2 {
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 300;
+  margin: 0 0 30px;
+  cursor: default;
+}
+.homeText .btn {
+  line-height: 1.5;
+  background-color: var(--whith-alpha-25);
+  border: 1px solid var(--whith-alpha-40);
+  padding: 10px 28px;
+  display: inline-block;
+  border-radius: 30px;
+  color: var(--main-color);
+  font-weight: 500;
+  text-transform: capitalize;
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+  vertical-align: middle;
+  transition: color 0.3s ease;
+  margin: 0 15px 15px 0;
+}
+.homeText .btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  background-color: var(--main-color);
+  z-index: -1;
+  transition: width 0.3s ease;
+}
+.homeText .btn:hover {
+  color: var(--white);
+}
+.homeText .btn:hover::before {
+  width: 100%;
+}
+
+.homeImg .imgBox {
+  max-width: 360px;
+  background-color: var(--whith-alpha-25);
+  border-radius: 50%;
+  border: 8px solid var(--whith-alpha-25);
+}
+
+.homeImg .imgBox img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+/* rwd */
+@media (max-width: 991px) {
+  .homeText,
+  .homeImg {
+    width: 100%;
+  }
+  .homeText {
+    text-align: center;
+  }
+  .homeImg {
+    order: -1;
+  }
+  .homeImg .imgBox {
+    max-width: 300px;
+    margin: auto;
+  }
+  .homeText .btn {
+    margin: 0 7px 15px;
+  }
+}
+@media (max-width: 575px) {
+  .homeText h1 {
+    font-size: 30px;
+  }
+  .homeText h2 {
+    font-size: 18px;
+  }
+}
+
+/* nfp */
+
+.nfmain {
+  max-width: 1200px;
+  margin: auto;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  color: var(--white);
+}
+.nfmain .nfsection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.nfmain .nfsection .nftitle {
+  font-size: 1.5rem;
+}
+.nfmain .nfsection .nfbacklink {
+  background-color: var(--whith-alpha-25);
+  border: 1px solid var(--whith-alpha-40);
+  padding: 5px 15px;
+  text-transform: capitalize;
+  margin: 0 10px 10px 0;
+  border-radius: 20px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+.nfmain .nfsection .nfbacklink a {
+  color: var(--main-color);
+  font-size: 12px;
+  font-weight: 500;
+  transition: 0.2s ease-in-out;
+  z-index: 3;
+}
+.nfmain .nfsection .nfbacklink span {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 0%;
+  background-color: var(--main-color);
+  height: 100%;
+  transition: 0.2s ease-in-out;
+}
+.nfmain .nfsection .nfbacklink:hover a {
+  color: var(--white);
+}
+.nfmain .nfsection .nfbacklink:hover span {
+  width: 100%;
+}

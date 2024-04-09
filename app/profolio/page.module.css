@@ -1,0 +1,223 @@
+.main {
+  max-width: 1200px;
+  margin: auto;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+.secPadding {
+  padding: 80px 0;
+}
+.container {
+  padding: 0 40px;
+  width: 100%;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.btn {
+  line-height: 1.5;
+  background-color: var(--whith-alpha-25);
+  border: 1px solid var(--whith-alpha-40);
+  padding: 10px 28px;
+  display: inline-block;
+  border-radius: 30px;
+  color: var(--main-color);
+  font-weight: 500;
+  text-transform: capitalize;
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+  vertical-align: middle;
+  transition: color 0.3s ease;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  background-color: var(--main-color);
+  z-index: -1;
+  transition: width 0.3s ease;
+}
+.btn:hover {
+  color: var(--white);
+}
+.btn:hover::before {
+  width: 100%;
+}
+.sectionTitle {
+  padding: 0 15px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+  cursor: default;
+}
+.sectionTitle h2 {
+  font-size: 40px;
+  text-transform: capitalize;
+}
+/* ---------------- */
+.portfolioSection {
+  padding-bottom: 50px;
+}
+.porfolioItem {
+  width: calc((100% / 3) - 30px);
+  margin: 0 15px 30px;
+}
+.porfolioItemThumbnail {
+  padding: 10px;
+  background-color: var(--whith-alpha-25);
+  border: 1px solid var(--whith-alpha-40);
+  border-radius: 10px;
+  width: 100%;
+  height: 200px;
+}
+.porfolioItemThumbnail img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+.porfolioItem h3 {
+  font-size: 20px;
+  text-transform: capitalize;
+  margin: 20px 0;
+  cursor: default;
+}
+/* -------------pop--------------------- */
+.porfolioPopup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 200;
+  visibility: hidden;
+  /* pop open set */
+  overflow-y: auto;
+}
+.porfolioPopup.open {
+  visibility: visible;
+  overflow-y: auto;
+}
+.ppInner {
+  min-height: 100vh;
+  padding: 40px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ppContent {
+  background-color: var(--whith-alpha-25);
+  padding: 30px;
+  border-radius: 30px;
+  max-width: 900px;
+  width: 100%;
+  border: 1px solid var(--whith-alpha-40);
+  backdrop-filter: var(--backdrop-filter-blur);
+  transform: scale(0.9);
+}
+.porfolioPopup.open .ppContent {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.5s ease;
+}
+.ppHeader {
+  position: relative;
+}
+
+.ppHeader .btn {
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: -40px;
+  top: -40px;
+}
+.ppThumbnail {
+  max-height: 100%;
+}
+.ppThumbnail img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+.ppHeader h3 {
+  font-size: 25px;
+  text-transform: capitalize;
+  margin: 20px 0 15px;
+  cursor: default;
+}
+.ppBody .description {
+  margin-bottom: 20px;
+  cursor: default;
+}
+.ppBody .generalInfo li {
+  margin-bottom: 10px;
+  font-weight: 500;
+  text-transform: capitalize;
+  cursor: default;
+}
+.ppBody .generalInfo li span {
+  font-weight: 300;
+  cursor: default;
+}
+.ppBody .generalInfo li a {
+  text-transform: lowercase;
+  color: var(--main-color);
+}
+/* rwd */
+@media (max-width: 991px) {
+  .container {
+    padding: 0;
+  }
+  .porfolioItemThumbnail {
+    height: 260px;
+  }
+  .porfolioItem {
+    width: calc(50% - 30px);
+  }
+}
+
+@media (max-width: 767px) {
+  .porfolioItemThumbnail {
+    height: 400px;
+  }
+  .porfolioItem {
+    width: calc(100% - 30px);
+  }
+  .ppInner {
+    padding: 30px 15px;
+  }
+}
+@media (max-width: 575px) {
+  .sectionTitle h2 {
+    font-size: 35px;
+  }
+  .ppHeader h3 {
+    font-size: 20px;
+  }
+  .porfolioItemThumbnail {
+    height: 350px;
+  }
+}
+@media (max-width: 441px) {
+  .porfolioItemThumbnail {
+    height: 240px;
+  }
+}
+@media (max-width: 375px) {
+  .porfolioItemThumbnail {
+    height: 210px;
+  }
+}
