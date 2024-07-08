@@ -12,7 +12,7 @@ export default function Home() {
           <div className={`${styles.container}`}>
             <div className={`${styles.row} ${styles.alignItemCenter}`}>
               <div className={styles.homeText}>
-                <p>{`Hello, I&apos;m`}</p>
+                <p>{`Hello, I'm`}</p>
                 <h1>Yao Shiuan</h1>
                 <h2>frontend wed developer</h2>
                 <Link
