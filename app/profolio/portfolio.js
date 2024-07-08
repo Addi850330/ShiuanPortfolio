@@ -34,12 +34,12 @@ export const data = [
       {
         id: 3,
         img: "/img/portfolio/4.jpg",
-        title: "???",
+        title: "GBF Game Web Design",
         des: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Minima esse perferendis corporis animi vero ipsa asperioresquae deleniti soluta sapiente aspernatur tempora, non nisidolorem! Iusto expedita, officiis rerum doloremque, nostrumdignissimos quidem quae sequi possimus voluptate eum doloremlibero.",
         date: "4 Dec 2020",
         used: "Html, Css ,javascript",
         role: "Frontend",
-        view: "www.domain.com",
+        view: "https://gbf-slider3d.vercel.app/",
       },
       {
         id: 4,
