@@ -32,6 +32,16 @@ export const data = [
         view: "https://green-island-card-collection.vercel.app/",
       },
       {
+        id: 10,
+        img: "/img/portfolio/11.png",
+        title: "Simple caculator App",
+        des: "In addition to the basic four arithmetic operations, this computer application also provides advanced functions of square calculation, square root and percentage calculation .",
+        date: "4 Jun 2020",
+        used: "Html, Css ,javascript",
+        role: "Frontend",
+        view: "https://mycalculator-lake.vercel.app/",
+      },
+      {
         id: 9,
         img: "/img/portfolio/7.jpg",
         title: "Draw Straws App",
