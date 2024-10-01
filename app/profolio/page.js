@@ -15,13 +15,14 @@ const Page = () => {
   const [pop, setPop] = useState("close");
 
   // popu set
-  const [imgsrc, setImgsrc] = useState("/img/portfolio/1.jpg");
+  const [imgsrc, setImgsrc] = useState("/img/portfolio/loading.png");
   const [title, setTitle] = useState("");
   const [des, setDes] = useState("");
   const [date, setDate] = useState("");
   const [used, setUsed] = useState("");
   const [role, setRole] = useState("");
   const [view, setView] = useState("");
+  const [git, setgit] = useState("");
 
   const popOpen = function (e) {
     const portfolioId = e.target.parentElement.id;
@@ -35,12 +36,21 @@ const Page = () => {
         setUsed(obj.used);
         setRole(obj.role);
         setView(obj.view);
+        setgit(obj.git);
       }
     });
 
     setPop("open");
   };
   const popClose = function () {
+    setImgsrc("/img/portfolio/loading.png");
+    setTitle("");
+    setDes("");
+    setDate("");
+    setUsed("");
+    setRole("");
+    setView("");
+    setgit("");
     setPop("close");
   };
   return (
@@ -129,6 +139,14 @@ const Page = () => {
                     <span>
                       <Link href={view} target="_blank">
                         {view}
+                      </Link>
+                    </span>
+                  </li>
+                  <li>
+                    Github -
+                    <span>
+                      <Link href={git} target="_blank">
+                        {git}
                       </Link>
                     </span>
                   </li>
