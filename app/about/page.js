@@ -117,11 +117,23 @@ const Page = () => {
                         <span>{experience.e}</span>
                       </h4>
                       <p>{experience.des}</p>
+
+                      <p>{experience.des1}</p>
+
+                      <p>{experience.des2}</p>
+
+                      <p>{experience.des3}</p>
+
+                      <p>{experience.des4}</p>
                     </div>
                   ))}
                 </div>
               </div>
-              <Link href="#cv.pdf" className={styles.btn} target="_blank">
+              <Link
+                href="https://www.cake.me/s--63XVpzbP_9Q225F57m4IAw--/berserker850330"
+                className={styles.btn}
+                target="_blank"
+              >
                 download cv
               </Link>
               <Link

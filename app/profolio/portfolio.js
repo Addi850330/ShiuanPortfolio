@@ -10,7 +10,7 @@ export const data = [
         used: "Next.js, Css, javascript, MongoDB, Cloudinary",
         role: "Frontend, Backend",
         view: "https://mp-trav.vercel.app/",
-        git: "#",
+        git: "https://github.com/Addi850330/mpclone",
       },
       {
         id: 3,
@@ -75,7 +75,7 @@ export const data = [
         date: "3 Jan 2023",
         used: "Html, Css, javascript",
         role: "Frontend",
-        view: "https://rgb-clock-design.vercel.app/",
+        view: "https://luckcard.vercel.app/",
         git: "https://github.com/Addi850330/luckcard",
       },
       {

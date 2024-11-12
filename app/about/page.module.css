@@ -199,6 +199,9 @@
 .aboutText .timelineItem h4 span {
   font-weight: 400;
 }
+.aboutText .timelineItem p {
+  margin-bottom: 10px;
+}
 .aboutText .btn {
   margin: 0 15px 15px 0;
 }
